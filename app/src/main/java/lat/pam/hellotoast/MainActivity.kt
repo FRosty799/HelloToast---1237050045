@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         val mShowCount = findViewById<TextView>(R.id.show_count)
         val buttonCountUp = findViewById<Button>(R.id.button_count)
         val buttonToast = findViewById<Button>(R.id.button_toast)
+        val buttonSwitchPage = findViewById<Button>(R.id.button_switchpage)
+
 
 
         buttonCountUp.setOnClickListener(View.OnClickListener {
@@ -34,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             val toast: Toast = Toast.makeText(this, "Angka yang dimunculkan "+tulisan, Toast.LENGTH_LONG)
             toast.show()
         })
+
+        buttonSwitchPage.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        })
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
