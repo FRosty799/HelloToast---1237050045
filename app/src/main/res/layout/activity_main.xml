@@ -12,13 +12,15 @@
         android:id="@+id/button_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_label_toast"
-        android:backgroundTint="#CE0CBD"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#CE0CBD"
+        android:text="@string/button_label_toast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/show_count"
@@ -57,5 +59,14 @@
         android:text="@string/button_label_pindah"
         app:cornerRadius="20dp"
         app:layout_constraintTop_toBottomOf="@+id/button_count" />
+
+    <Button
+        android:id="@+id/button_browser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3DCE0C"
+        android:text="@string/button_label_browser"
+        app:layout_constraintBottom_toTopOf="@+id/button_toast" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
